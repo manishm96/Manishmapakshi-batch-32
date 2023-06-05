@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>JS Functions</h2>
+
+    <p id = "demo"></p>
+
+    <p id = "demo2"></p>
+
+    <p id = "demo3"></p>
+
+    <script>
+
+        const hobbies = ["playing soccer", "watching cricket", "watching movies", "currency collection"];
+
+        function displayHobbies(){
+
+            return hobbies;
+        }
+
+        function addHobbies(p){
+
+            hobbies.push(p);
+
+            return hobbies;
+        }
+
+        function deleteHobbies(p1){
+
+            for(var i = 0; i < hobbies.length; i++)
+            {
+                if(hobbies[i] === p1){
+                    hobbies.splice(i,1);
+                }
+            }
+
+            return hobbies;
+
+        }
+
+        document.getElementById("demo").innerHTML=displayHobbies();
+        document.getElementById("demo2").innerHTML=addHobbies("reading news");
+        document.getElementById("demo3").innerHTML=deleteHobbies("watching cricket");
+    </script>
+    
+</body>
+</html>
