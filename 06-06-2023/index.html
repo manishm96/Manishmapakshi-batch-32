@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Input Form</h2>
+
+    <form>
+
+        <div>
+            <label for="fname">First name</label>
+            <br>
+            <input type="text" id="fname" name="fname">
+            <br><br>
+        </div>
+
+        <div>
+            <label for="lname">Last name</label>
+            <br>
+            <input type="text" id="lname" name="lname">
+            <br><br>
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+            <br>
+            <label for="gender1">male</label>
+            <input type="checkbox" id="gender1" name="gender1" value="male">
+            <br>
+            <label for="gender2">female</label>
+            <input type="checkbox" id="gender2" name="gender2" value="female">
+            <br><br>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" name="email">
+            <br><br>
+        </div>
+
+        <div>
+            <label for="phone">Phone number</label>
+            <br>
+            <input type="tel" id="phone" name="phone">
+            <br><br>
+        </div>
+
+        <div>
+            <label for="bday">Date of birth</label>
+            <br>
+            <input type="date" id="bday" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+            <br><br>
+        </div>
+
+        <div>
+            <label for="hobbies">Hobbies:</label>
+            <br>
+            <label for="1">Watching movies</label>
+            <input type="checkbox" id="1" name="1" value="Watching movies">
+            <br>
+            <label for="2">Playing soccer</label>
+            <input type="checkbox" id="2" name="2" value="Playing soccer">
+            <br>
+            <label for="3">Watching cricket</label>
+            <input type="checkbox" id="3" name="3" value="Watching cricket">
+            <br>
+            <label for="4">Cooking</label>
+            <input type="checkbox" id="4" name="4" value="Cooking">
+            <br>
+            <label for="5">Currency collection</label>
+            <input type="checkbox" id="5" name="5" value="Currency collection">
+            <br><br>
+        </div>
+
+        <div id="b">
+            <button id="submit" onclick="getData()">submit</button>
+        </div>
+
+        <div id="display">
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+            <p id="p4"></p>
+            <p id="p5"></p>
+            <p id="p6"></p>
+            <p id="p7"></p>
+            <p id="p8"></p>
+            <p id="p9"></p>
+            <p id="p10"></p>
+            <p id="p11"></p>
+            <p id="p12"></p>
+        </div>
+
+        <script>
+
+            function getData()
+            {
+                let firstname = document.getElementById("fname").value;
+                let lastname = document.getElementById("lname").value;
+                let gen1 = document.getElementById("gender1").value;
+                let gen2 = document.getElementById("gender2").value;
+                let Email = document.getElementById("email").value;
+                let birthday = document.getElementById("bday").value;
+                let movies = document.getElementById("1").value;
+                let soccer = document.getElementById("2").value;
+                let cricket = document.getElementById("3").value;
+                let cooking = document.getElementById("4").value;
+                let currency = document.getElementById("5").value;
+                let Phone = document.getElementById("phone").value;
+
+                document.getElementById("p1").innerHTML=firstname;
+                document.getElementById("p2").innerHTML=lastname;
+                document.getElementById("p3").innerHTML=gen1;
+                document.getElementById("p4").innerHTML=gen2;
+                document.getElementById("p5").innerHTML=Email;
+                document.getElementById("p6").innerHTML=birthday;
+                document.getElementById("p7").innerHTML=movies;
+                document.getElementById("p8").innerHTML=soccer;
+                document.getElementById("p9").innerHTML=cricket;
+                document.getElementById("p10").innerHTML=cooking;
+                document.getElementById("p11").innerHTML=currency;
+                document.getElementById("p12").innerHTML=Phone;
+                
+            }
+        </script>
+
+
+    </form>
+</body>
+</html>
