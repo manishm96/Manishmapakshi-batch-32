@@ -1,0 +1,25 @@
+<header>
+  <div class="container">
+    <h1 class="h1">TO DO APP</h1>
+  </div>
+
+  <div>
+    <nav>
+      <input type="search" class="search" value="search"/>
+      <button type="submit" class="button">search</button>
+      
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Contact</a></li>
+        <ng-container 
+        *ngIf="displayFlag; then ifTemplate; else elseTemplate"></ng-container>
+        <ng-template #ifTemplate>
+          <li><a href="#" (click)="onClick()">Login</a></li>
+        </ng-template>
+        <ng-template #elseTemplate>
+          <li><a href="#" (click)="onClick()">Logout</a></li>
+        </ng-template>
+      </ul>
+    </nav>
+  </div>
+</header>
